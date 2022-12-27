@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Calculador de IMC</title>
 </head>
 <body>
@@ -16,9 +17,10 @@
     <button id="calcular">Calcular</button>
 
     <div class="resultado-wrapper">
-      <h3 class="titulo-resultado"></h3>
-      <p class="resultado"></p>
-      <p class="resultado-classificacao"></p>
+      <h3 class="titulo-resultado" data-resultado="titulo"></h3>
+      <p class="resultado" data-resultado="imc"></p>
+      <p class="resultado-classificacao" data-resultado="classificacao">teste123</p>
+      <button id="recarregar" onclick="window.location.reload();">Calcular novamente</button>
     </div>
   </div> 
   
