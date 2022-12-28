@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Calculador de IMC</title>
 </head>
 <body>
   <div class="container">
-    <h1 class="titulo">Calcule o seu IMC</h1>
-    <p class="subtitulo">IMC (Índice de massa corporal) é um método comumente utilizado para diagnosticar o sobrepeso e obesidade.</p>
-    <input type="text" name="nome" id="nome" placeholder="Seu nome">
-    <input type="number" name="altura" id="altura" placeholder="Sua altura (m)" required>
-    <input type="number" name="peso" id="peso" placeholder="Seu peso (kg)" required>
-    <button id="calcular">Calcular</button>
-
-    <div class="resultado-wrapper">
-      <h3 class="titulo-resultado" data-resultado="titulo"></h3>
-      <p class="resultado" data-resultado="imc"></p>
-      <p class="resultado-classificacao" data-resultado="classificacao"></p>
-      <button id="recarregar" onclick="window.location.reload();">Calcular novamente</button>
+    <div class="content-wrapper">
+      <h1 class="titulo">Calcule o seu IMC</h1>
+      <p class="subtitulo">IMC (Índice de massa corporal) é um método comumente utilizado para diagnosticar o sobrepeso e obesidade.</p>
+      <div class="input-container">
+        <input type="text" name="nome" id="nome" placeholder="Seu nome">
+        <input type="number" name="altura" id="altura" placeholder="Sua altura (m)" required="">
+        <input type="number" name="peso" id="peso" placeholder="Seu peso (kg)" required>
+        <button id="calcular">Calcular</button>
+      </div>
+      <div class="resultado-wrapper">
+        <h3 class="titulo-resultado" data-resultado="titulo"></h3>
+        <p class="resultado" data-resultado="imc"></p>
+        <p class="resultado-classificacao" data-resultado="classificacao"></p>
+        <button id="recarregar" onclick="window.location.reload();">Calcular novamente</button>
+      </div>
     </div>
   </div> 
   

@@ -2,7 +2,7 @@ const nome = document.getElementById("nome");
 const altura =  document.getElementById("altura");
 const peso = document.getElementById("peso");
 const btnCalcular = document.getElementById("calcular");
-// const btnRecarregar = document.getElementById("recarregar");
+const btnRecarregar = document.getElementById("recarregar");
 const resultadoDiv = document.querySelector(".resultado-wrapper")
 const resultadoP = document.querySelectorAll("[data-resultado]");
 
@@ -22,10 +22,7 @@ btnCalcular.addEventListener("click", () => {
 
     resultadoImc.innerText = "";
     classificacao.innerText = "";
-    nome.disabled = true;
-    altura.disabled = true;
-    peso.disabled = true;
-    btnCalcular.disabled = true;
+    btnRecarregar.style.display = "none";
 
   }
 
@@ -65,6 +62,8 @@ btnCalcular.addEventListener("click", () => {
     classificacao.innerHTML = "<strong>Classificação:</strong> Obesidade Grau III, risco muito grave!";
   }
 
+
+
   // limpa os valores do input
   nome.value = "";
   altura.value = "";
@@ -74,6 +73,8 @@ btnCalcular.addEventListener("click", () => {
   altura.disabled = true;
   peso.disabled = true;
   btnCalcular.disabled = true;
+  btnRecarregar.style.display = "block";
+
 
   }  
 });

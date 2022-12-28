@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+:root {
+  --clr-text: rgb(232, 232, 232);
+}
+
+/* Esconde a div que mostra o resultado */
+.resultado-wrapper {
+  display: none;
+  transition: .5s ease;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: rgb(9,18,42);
+  background: linear-gradient(37deg, #09122a 0%, #16213a 46%, #2a364d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+	margin-inline: auto;
+	width: min(90%,150rem);
+}
+
+.titulo {
+  color: var(--clr-text);
+  font-size: 3.6rem;
+  text-align: center;
+}
+
+.subtitulo {
+  color: var(--clr-text);
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.content-wrapper {
+  max-width: 90rem;
+  margin-inline: auto;
+  background-color: #303956;
+  border-radius: 2rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 1.6rem;
+  border-radius: .8rem;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  background-color: #465674;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #bfc7d6;
+}
+
+#calcular {
+  border-radius: .8rem;
+  border: none;
+  outline: none;
+  padding: 1.6rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #bc5d0f;
+  cursor: pointer;  
+}
+
+.titulo-resultado {
+  color: var(--clr-text);
+  font-size: 2.4rem;
+  text-align: center;
+  background-color: #15233a;
+  padding: 1.8rem;
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: .8rem;
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.resultado, 
+.resultado-classificacao {
+  color: var(--clr-text);
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+  line-height: 2.4rem;
+}
+
+#recarregar {
+  margin-inline: auto;
+  margin-top: 3rem;
+  border-radius: .8rem;
+  border: none;
+  outline: none;
+  padding: 1.6rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #d17e39;
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;  
+}
