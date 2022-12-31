@@ -58,7 +58,7 @@ body {
 
 }
 
-.input-container {
+.inputs-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -78,6 +78,17 @@ input {
 
 input::placeholder {
   color: #bfc7d6;
+}
+
+label {
+font-size: 1.6rem;
+color: var(--clr-text);
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
 }
 
 #calcular {

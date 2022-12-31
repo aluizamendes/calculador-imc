@@ -16,10 +16,19 @@
     <div class="content-wrapper">
       <h1 class="titulo">Calcule o seu IMC</h1>
       <p class="subtitulo">IMC (Índice de massa corporal) é um método comumente utilizado para diagnosticar o sobrepeso e obesidade.</p>
-      <div class="input-container">
-        <input type="text" name="nome" id="nome" placeholder="Seu nome">
-        <input type="number" name="altura" id="altura" placeholder="Sua altura (m)" required="">
-        <input type="number" name="peso" id="peso" placeholder="Seu peso (kg)" required>
+      <div class="inputs-container">
+        <div class="input-field">
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" placeholder="Seu nome">
+        </div>
+        <div class="input-field">
+          <label for="altura">Altura*</label>
+          <input type="number" name="altura" id="altura" placeholder="Sua altura (m)" required="">
+        </div>
+        <div class="input-field">
+          <label for="peso">Peso*</label>
+          <input type="number" name="peso" id="peso" placeholder="Seu peso (kg)" required>
+        </div>
         <button id="calcular">Calcular</button>
       </div>
       <div class="resultado-wrapper">
