@@ -92,17 +92,40 @@ input::placeholder {
   cursor: pointer;  
 }
 
-.titulo-resultado {
-  color: var(--clr-text);
+.titulo-resultado.error {
+  color: #1c1c1c;
   font-size: 2.4rem;
   text-align: center;
-  background-color: #15233a;
-  padding: 1.8rem;
+  background-color: #e1d6d6; /* 15233a */
+  padding: 1.4rem;
   width: fit-content;
   margin-inline: auto;
   border-radius: .8rem;
   margin-top: 2rem;
   margin-bottom: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.titulo-resultado.success {
+  color: #1c1c1c;
+  font-size: 2.4rem;
+  text-align: center;
+  background-color: #d3e1d1;
+  padding: 1.4rem;
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: .8rem;
+  margin-top: 2rem;
+  margin-bottom: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.titulo-resultado img {
+  width: 4rem;
 }
 
 .resultado, 
