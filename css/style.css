@@ -10,7 +10,6 @@
 /* Esconde a div que mostra o resultado */
 .resultado-wrapper {
   display: none;
-  transition: .5s ease;
 }
 
 html {
@@ -43,6 +42,8 @@ body {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 2.4rem;
 }
 
 .content-wrapper {
@@ -126,4 +127,15 @@ input::placeholder {
   text-decoration: underline;
   background-color: transparent;
   cursor: pointer;  
+}
+
+/* Responsive */
+@media (max-width: 550px) {
+  input {
+    width: 100%;
+  }
+
+  #calcular {
+    width: 100%;
+  }
 }
