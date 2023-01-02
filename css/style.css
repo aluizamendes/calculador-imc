@@ -161,13 +161,23 @@ color: var(--clr-text);
     font-size: 55%;
   }
 
+  body {
+    padding: 2rem 0;
+    min-height: fit-content;
+  }
+
   .content-wrapper {
     padding: 4rem 2.4rem;
   }
 
   .titulo-resultado {
-    flex-direction: column;
+    text-align: left;
+    flex-direction: row;
     padding: 1.6rem;
+  }
+
+  .titulo-resultado.error {
+    font-size: 1.8rem;
   }
 
   input {

@@ -19,7 +19,7 @@ btnCalcular.addEventListener("click", () => {
   // se os campos estiverem vazios mensagem de erro
   if(altura.value == "" || peso.value == "" || altura.value == null || peso.value == null) {
     resultadoTitle.classList.add("error");
-    resultadoTitle.innerHTML = `<img src="assets/error.svg" alt="imagem de feedback do calculo"> É necessário informar os dados acima para calcular seu imc.`;
+    resultadoTitle.innerHTML = `<img src="assets/error.svg" alt="imagem de feedback do calculo"> É necessário a altura e o peso para calcular seu IMC.`;
 
     resultadoImc.innerText = "";
     classificacao.innerText = "";
@@ -31,17 +31,23 @@ btnCalcular.addEventListener("click", () => {
     // calcula imc
     let imc = peso.value / (altura.value * altura.value);
       
-    resultadoTitle.classList.add("success");
+    if (resultadoTitle.classList.contains("error")) {
+      resultadoTitle.classList.remove("error");
+      resultadoTitle.classList.add("success");
+    } else {
+      resultadoTitle.classList.add("success");
+    }
+
     resultadoTitle.innerHTML = `<img src="assets/success.svg" alt="imagem de feedback do calculo">Seu IMC foi calculado!`;
 
     // se o valor do nome estiver vazio
     if(nome.value == "") {
       // exibe resultado na tela
-      resultadoImc.innerText = `O seu imc é igual a: ${imc.toFixed(2)}.`;
+      resultadoImc.innerHTML = `O seu imc é igual a: ${imc.toFixed(2)}.`;
     } 
     else {
       // exibe resultado na tela
-      resultadoImc.innerText = `${nome.value}, o seu IMC é igual a: ${imc.toFixed(2)}.`;
+      resultadoImc.innerHTML = `${nome.value}, o seu IMC é igual a: ${imc.toFixed(2)}.`;
     } 
 
     // exibir a classificação do imc
